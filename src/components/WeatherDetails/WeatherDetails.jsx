@@ -18,10 +18,10 @@ const WeatherDetails = (props) => {
         {/* Temperature Information */}
         <div className="temperature-info">
           <h3>Temperature</h3>
-          <p>{props.weather[6]}°C</p>
-          <p>{props.weather[7]}°F</p>
-          <p>{props.weather[15]}°C</p>
-          <p>{props.weather[16]}°F</p>
+          <p>{props.weather[6]}</p>
+          <p>{props.weather[7]}</p>
+          <p>{props.weather[15]}</p>
+          <p>{props.weather[16]}</p>
         </div>
 
         {/* Weather Conditions */}
@@ -35,8 +35,8 @@ const WeatherDetails = (props) => {
         {/* Wind Information */}
         <div className="wind-info">
           <h3>Wind</h3>
-          <p>{props.weather[9]} mph</p>
-          <p>{props.weather[10]} kph</p>
+          <p>{props.weather[9]}</p>
+          <p>{props.weather[10]}</p>
           <p>{props.weather[11]}°</p>
         </div>
 
