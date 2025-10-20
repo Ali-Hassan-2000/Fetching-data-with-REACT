@@ -10,9 +10,9 @@ const WeatherSearch = (props) => {
   };
 
   return (
-    <section>
-      <h2>Search</h2>
-      <form onSubmit={handleSubmit}>
+    <section className="weather-search">
+      <h2>🔍 Search</h2>
+      <form className="search-form" onSubmit={handleSubmit}>
         <label htmlFor="city">Enter a city:</label>
         <input
           id="city"
