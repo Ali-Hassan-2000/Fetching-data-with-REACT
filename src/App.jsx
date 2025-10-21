@@ -1,6 +1,6 @@
 import './App.css';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import * as weatherService from './services/weatherService';
 import WeatherSearch from './components/WeatherSearch/WeatherSearch';
@@ -35,6 +35,39 @@ function App() {
 
     setWeather(newWeatherState);
   };
+
+  useEffect(() => {
+
+    const fetchDefaultData = async () => {
+      
+      const data = await weatherService.show('Manama');
+      
+      const newWeatherState = [
+        data.location.name,
+        data.location.region,
+        data.location.country,
+        data.location.lat,
+        data.location.lon,
+        data.location.localtime,
+        data.current.temp_c,
+        data.current.temp_f,
+        data.current.condition.text,
+        data.current.wind_mph,
+        data.current.wind_kph,
+        data.current.wind_degree,
+        data.current.pressure_mb,
+        data.current.humidity,
+        data.current.cloud,
+        data.current.feelslike_c,
+        data.current.feelslike_f,
+      ];
+      
+      setWeather(newWeatherState);
+    };
+
+    fetchDefaultData();
+
+  }, []);
 
   return (
     <>
