@@ -1,4 +1,4 @@
-# Weather App
+# Weather App 
 
 A modern, responsive weather application built with React that provides real-time weather information for cities worldwide [Web link](https://fetching-data-with-react.vercel.app/).
 
